@@ -1,0 +1,52 @@
+# ~/.config/swaylock/config
+
+# Disable all text and icons for a clean blank look
+indicator-caps-lock
+
+# Colors — minimal grayscale palette
+color=1e1e2eff
+inside-color=1e1e2e00
+inside-clear-color=1e1e2e00
+inside-caps-lock-color=1e1e2e00
+inside-ver-color=1e1e2e00
+inside-wrong-color=1e1e2e00
+
+ring-color=1e1e2eff
+ring-clear-color=cdd6f4ff
+ring-caps-lock-color=f9e2afff
+ring-ver-color=89b4faff
+ring-wrong-color=f38ba8ff
+
+line-color=00000000
+line-clear-color=00000000
+line-caps-lock-color=00000000
+line-ver-color=00000000
+line-wrong-color=00000000
+
+key-hl-color=89b4faff
+separator-color=00000000
+
+text-color=cdd6f4ff
+text-clear-color=cdd6f4ff
+text-ver-color=89b4faff
+text-wrong-color=f38ba8ff
+
+# Behavior
+indicator
+indicator-radius=90
+indicator-thickness=10
+clock
+timestr=%H:%M
+datestr=%A, %B %d
+
+# Disable the keyboard layout indicator text for cleanliness
+font=JetBrains Mono
+font-size=24
+
+# Blur the background instead of a solid color (requires swaylock-effects)
+screenshots
+effect-blur=7x5
+effect-vignette=0.5:0.5
+
+ignore-empty-password
+show-failed-attempts

@@ -1,0 +1,60 @@
+# ==============================================================================
+# SECRETS & CREDENTIALS (NEVER COMMIT THESE)
+# ==============================================================================
+*.key
+*.pem
+*.pfx
+*.asc
+*.p12
+.env
+.env.*
+id_rsa
+idrc
+id_ed25519
+known_hosts
+authorized_keys
+
+# ==============================================================================
+# SHELL HISTORY & CACHE
+# ==============================================================================
+.zsh_history
+.bash_history
+.histfile
+.zcompdump*
+.lesshst
+.python_history
+.node_repl_history
+
+# ==============================================================================
+# RUNTIME, SOCKETS & SYSTEM CACHE
+# ==============================================================================
+*.log
+*.tmp
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# ==============================================================================
+# APPLICATION-SPECIFIC RUNTIME STATE
+# ==============================================================================
+# Neovim / Vim undo & swap files
+nvim/.config/nvim/undo/
+nvim/.config/nvim/swap/
+nvim/.config/nvim/view/
+nvim/.config/nvim/.netrwhist
+
+# Waybar / Hyprland runtime sockets or logs
+waybar/.config/waybar/*.log
+
+# GTK / Desktop environment runtime databases
+dconf/
+pulse/
+*.db
+
+# ==============================================================================
+# MACHINE-LOCAL OVERRIDES
+# ==============================================================================
+# Ignore any files ending in .local (e.g. zshrc.local, gitconfig.local)
+*.local

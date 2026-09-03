@@ -1,0 +1,93 @@
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "Hack Nerd Font", "Hack Nerd Font Mono";
+    font-size: 13px;
+    min-height: 0;
+}
+
+
+.modules-left,
+.modules-center,
+.modules-right {
+    background: rgba(26, 26, 26, 0.7);
+    border-radius: 12px;
+    padding: 5px 0px 5px 0px;
+    margin: 4px;
+}
+
+window#waybar {
+    background-color: rgba(40, 40, 40, 0.0);
+    color: white;
+}
+
+#clock, #cpu, #memory, #temperature, #battery, 
+#network, #pulseaudio, #backlight, #tray {
+    padding: 0 10px;
+    font-family: "Hack Nerd Font", "Hack Nerd Font Mono";
+    background-color: transparent;
+    color: white;
+}
+
+/* Workspaces styling */
+
+#workspaces button:only-child {
+    padding: 0 4px 0 4px;
+}
+
+#workspaces button {
+    border: none;
+    color: gray;
+    padding: 0 4px 0 4px;
+}
+
+#workspaces button:hover {
+    border: none;
+    background: transparent;
+}
+
+#workspaces button.focused {
+    color: white;
+}
+
+#workspaces button.urgent {
+    color: blue;
+}
+
+#temperature.critical {
+    color: red;
+}
+
+#battery.charging, #battery.plugged {
+    color: green;
+}
+
+#battery.warning:not(.charging) {
+    color: orange;
+}
+
+#battery.critical:not(.charging) {
+    color: red;
+}
+
+#network.disconnected {
+    color: red;
+}
+
+#pulseaudio.muted {
+    color: red;
+}
+
+#tray {
+    background-color: transparent;
+    padding: 0 8px;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    color: red;
+}
