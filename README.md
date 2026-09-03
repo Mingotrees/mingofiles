@@ -1,4 +1,4 @@
-# 🛠️ Dotfiles
+# 🥭 Mingofiles
 
 My personal Arch Linux configuration files, managed with **GNU Stow** and automated for fast deployment. Built for a Wayland-native workflow using **Niri**, **Waybar**, and **Kitty**.
 
@@ -24,7 +24,7 @@ My personal Arch Linux configuration files, managed with **GNU Stow** and automa
 Package configurations mirror the home directory structure using **GNU Stow**:
 
 ```text
-~/dotfiles/
+~/mingofiles/
 ├── fuzzel/      # App launcher settings
 ├── git/         # Global .gitconfig
 ├── kitty/       # Terminal styling and keybinds
@@ -46,8 +46,8 @@ Package configurations mirror the home directory structure using **GNU Stow**:
 Clone the repository and run the bootstrap script to install required system packages and set up all symlinks automatically:
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/dotfiles.git ~/dotfiles
-cd ~/dotfiles
+git clone https://github.com/YOUR_USERNAME/mingofiles.git ~/mingofiles
+cd ~/mingofiles
 chmod +x bootstrap.sh
 ./bootstrap.sh
 ```
@@ -65,8 +65,8 @@ If you prefer to manage individual configurations manually:
 
 2. **Clone the repository:**
    ```bash
-   git clone https://github.com/YOUR_USERNAME/dotfiles.git ~/dotfiles
-   cd ~/dotfiles
+   git clone https://github.com/YOUR_USERNAME/mingofiles.git ~/mingofiles
+   cd ~/mingofiles
    ```
 
 3. **Stow specific packages:**
@@ -87,10 +87,10 @@ stow -D waybar
 
 ## ⚙️ Maintenance & Workflow
 
-Since all configs are symlinked directly to `~/dotfiles`, any changes made inside `~/.config/` update this repository in real-time.
+Since all configs are symlinked directly to `~/mingofiles`, any changes made inside `~/.config/` update this repository in real-time.
 
 ```bash
-cd ~/dotfiles
+cd ~/mingofiles
 git status
 git add .
 git commit -m "Update Waybar layout and Niri keybinds"
