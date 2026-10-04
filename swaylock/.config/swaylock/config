@@ -40,7 +40,7 @@ timestr=%H:%M
 datestr=%A, %B %d
 
 # Disable the keyboard layout indicator text for cleanliness
-font=JetBrains Mono
+font=JetBrainsMono Nerd Font
 font-size=24
 
 # Blur the background instead of a solid color (requires swaylock-effects)

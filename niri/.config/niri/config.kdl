@@ -69,14 +69,16 @@ input {
     // focus-follows-mouse max-scroll-amount="0%"
 }
 
-
+gestures{
+  hot-corners {off;}
+}
 // You can configure outputs by their name, which you can find
 // by running `niri msg outputs` while inside a niri instance.
 // The built-in laptop monitor is usually called "eDP-1".
 // Find more information on the wiki:
 // https://niri-wm.github.io/niri/Configuration:-Outputs
 // Remember to uncomment the node by removing "/-"!
-output "eDP-1" {
+output "eDP-2" {
     // Uncomment this line to disable this output.
     // off
     focus-at-startup
@@ -86,10 +88,10 @@ output "eDP-1" {
     // for the resolution.
     // If the mode is omitted altogether or is invalid, niri will pick one automatically.
     // Run `niri msg outputs` while inside a niri instance to list all outputs and their modes.
-    mode "1920x1080@144.030"
+    mode "1920x1080@60.00"
+    scale 1
 
     // You can use integer or fractional scale, for example use 1.5 for 150% scale.
-    scale 2
 
     // Transform allows to rotate the output counter-clockwise, valid values are:
     // normal, 90, 180, 270, flipped, flipped-90, flipped-180 and flipped-270.
@@ -108,10 +110,24 @@ output "eDP-1" {
 }
 
 output "HDMI-A-1"{
-   mode "1920x1080@75"
+   mode "1920x1080@74.973"
+   // 896x640
    //mode custom=true "1920x810@75"
    //modeline 162.75  1920 2040 2240 2560  810 813 823 848 "-hsync" "+vsync"
-   position x=1920 y=0
+   //position x=1920 y=0
+   //traniukorm "270"
+}
+
+
+output "DP-1" {
+    // Explicitly ensure the output is NOT turned off
+    // (Make sure you don't have "off" written here)
+
+    // Force Niri to wake up the monitor and assign a mode
+    mode "1920x1080@144.00"
+
+    // Enable VRR now that the display will be active
+    variable-refresh-rate
 }
 
 // Settings that influence how windows are positioned and sized.
@@ -319,6 +335,22 @@ animations {
 
 // Work around WezTerm's initial configure bug
 // by setting an empty default-column-width.
+window-rule{
+   match app-id="vesktop"
+   default-column-width { fixed 1000; }
+}
+
+window-rule {
+    match app-id="steam" title=r#"^notificationtoasts_\d+_desktop$"#
+
+    // Centers it away and pins it neatly to your preferred corner
+    default-floating-position x=16 y=16 relative-to="bottom-right"
+
+    // Prevents the popup from stealing focus while you type
+    open-focused false
+}
+
+
 
 window-rule {
     // This regular expression is intentionally made as specific as possible,
@@ -413,7 +445,7 @@ binds {
     // or do a four-finger swipe up on a touchpad.
     Mod+O repeat=false { toggle-overview; }
 
-    Mod+Q repeat=false { close-window; }
+    Mod+SHIFT+Q repeat=false { close-window; }
 
     Mod+Left  { focus-column-left; }
     Mod+Down  { focus-window-down; }

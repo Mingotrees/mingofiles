@@ -8,8 +8,11 @@
 *.p12
 .env
 .env.*
+!.env.example
+!.env.sample
 id_rsa
-idrc
+id_dsa
+id_ecdsa
 id_ed25519
 known_hosts
 authorized_keys

@@ -25,6 +25,7 @@ Package configurations mirror the home directory structure using **GNU Stow**:
 
 ```text
 ~/mingofiles/
+├── fastfetch/    # System information display
 ├── fuzzel/      # App launcher settings
 ├── git/         # Global .gitconfig
 ├── kitty/       # Terminal styling and keybinds
@@ -32,6 +33,7 @@ Package configurations mirror the home directory structure using **GNU Stow**:
 ├── niri/        # Niri WM compositor configuration
 ├── nvim/        # Neovim init & plugin configs
 ├── swaylock/    # Screen locker setup
+├── tmux/        # Terminal multiplexer settings
 ├── waybar/      # Status bar modules and CSS
 ├── zsh/         # Shell config (.zshrc, .p10k.zsh)
 └── bootstrap.sh # Automated setup script
@@ -46,11 +48,13 @@ Package configurations mirror the home directory structure using **GNU Stow**:
 Clone the repository and run the bootstrap script to install required system packages and set up all symlinks automatically:
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/mingofiles.git ~/mingofiles
+git clone https://github.com/Mingotrees/mingofiles.git ~/mingofiles
 cd ~/mingofiles
 chmod +x bootstrap.sh
 ./bootstrap.sh
 ```
+
+The script installs repository packages with `pacman`. Install `yay` first if you also want the AUR-only Swaylock effects, Wlogout, and Powerlevel10k packages installed automatically.
 
 ---
 
@@ -65,7 +69,7 @@ If you prefer to manage individual configurations manually:
 
 2. **Clone the repository:**
    ```bash
-   git clone https://github.com/YOUR_USERNAME/mingofiles.git ~/mingofiles
+   git clone https://github.com/Mingotrees/mingofiles.git ~/mingofiles
    cd ~/mingofiles
    ```
 
