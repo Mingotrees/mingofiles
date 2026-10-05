@@ -34,3 +34,4 @@ alias waybarsconf='vim ~/.config/waybar/style.css'
 # Added by Antigravity CLI installer
 export PATH="$HOME/.local/bin:$PATH"
 #export PATH="$HOME/.docker-bin:$PATH"
+

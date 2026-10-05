@@ -1,0 +1,74 @@
+/* Quiet charcoal theme. Layout/actions use the system wlogout config. */
+* {
+    font-family: "DejaVu Sans", sans-serif;
+    font-size: 14px;
+    background-image: none;
+    box-shadow: none;
+    text-shadow: none;
+}
+
+window {
+    background-color: rgba(12, 14, 16, 0.82);
+}
+
+button {
+    color: #dce1e5;
+    background-color: #1b1e22;
+    border: 1px solid #33383e;
+    border-radius: 12px;
+    padding: 22px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 48px;
+    outline-style: none;
+    transition: background-color 160ms ease, border-color 160ms ease;
+}
+
+button:hover {
+    background-color: #252a30;
+    border-color: #626d77;
+}
+
+button:focus {
+    background-color: #252a30;
+    border-color: #8bcac8;
+    outline: 1px solid #8bcac8;
+    outline-offset: -4px;
+}
+
+button:active {
+    background-color: #303a40;
+}
+
+#shutdown:hover, #shutdown:focus {
+    border-color: #d49898;
+    background-color: #33272b;
+}
+
+#shutdown:focus {
+    outline-color: #d49898;
+}
+
+#lock {
+    background-image: url("/usr/share/wlogout/icons/lock.png");
+}
+
+#hibernate {
+    background-image: url("/usr/share/wlogout/icons/hibernate.png");
+}
+
+#logout {
+    background-image: url("/usr/share/wlogout/icons/logout.png");
+}
+
+#shutdown {
+    background-image: url("/usr/share/wlogout/icons/shutdown.png");
+}
+
+#suspend {
+    background-image: url("/usr/share/wlogout/icons/suspend.png");
+}
+
+#reboot {
+    background-image: url("/usr/share/wlogout/icons/reboot.png");
+}

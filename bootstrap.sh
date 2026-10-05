@@ -12,6 +12,7 @@ PACKAGES=(
   "nvim"
   "kitty"
   "waybar"
+  "wlogout"
   "niri"
   "fuzzel"
   "mako"

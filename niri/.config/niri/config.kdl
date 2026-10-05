@@ -295,6 +295,14 @@ layout {
 spawn-at-startup "waybar"
 spawn-at-startup "blueman-applet"
 spawn-at-startup "awww-daemon"
+spawn-at-startup "swayidle" "-w" "timeout" "601" "niri msg action power-off-monitors" "timeout" "600" "swaylock -f" "before-sleep" "swaylock -f"
+
+switch-events {
+     lid-close{
+       spawn "swaylock" "-f"
+     }
+}
+
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
 // spawn-sh-at-startup "qs -c ~/source/qs/MyAwesomeShell"
 
@@ -351,6 +359,10 @@ window-rule {
 }
 
 
+window-rule {
+    match app-id="zen"
+    opacity 0.85
+}
 
 window-rule {
     // This regular expression is intentionally made as specific as possible,
@@ -410,7 +422,7 @@ binds {
     Mod+RETURN hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
     Mod+D hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel"; }
     Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
-    Super+P {spawn "wlogout";}
+    Super+P { spawn "wlogout" "-b" "3" "-c" "12" "-r" "12" "-L" "620" "-R" "620" "-T" "320" "-B" "320" "-n"; }
     // Use spawn-sh to run a shell command. Do this if you need pipes, multiple commands, etc.
     // Note: the entire command goes as a single argument. It's passed verbatim to `sh -c`.
     // For example, this is a standard bind to toggle the screen reader (orca).

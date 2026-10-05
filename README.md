@@ -16,6 +16,7 @@ My personal Arch Linux configuration files, managed with **GNU Stow** and automa
 | **Editor** | Neovim |
 | **Launcher** | [Fuzzel](https://codeberg.org/dnkl/fuzzel) |
 | **Notifications** | [Mako](https://github.com/emersion/mako) |
+| **Power menu** | [Wlogout](https://github.com/ArtsyMacaw/wlogout) |
 
 ---
 
@@ -35,6 +36,7 @@ Package configurations mirror the home directory structure using **GNU Stow**:
 ├── swaylock/    # Screen locker setup
 ├── tmux/        # Terminal multiplexer settings
 ├── waybar/      # Status bar modules and CSS
+├── wlogout/     # Minimal power menu theme (Super+P)
 ├── zsh/         # Shell config (.zshrc, .p10k.zsh)
 └── bootstrap.sh # Automated setup script
 ```
@@ -77,7 +79,8 @@ If you prefer to manage individual configurations manually:
    ```bash
    # Symlink individual configurations
    stow niri
-   stow waybar
+    stow waybar
+    stow wlogout
    stow kitty
    stow zsh
    ```

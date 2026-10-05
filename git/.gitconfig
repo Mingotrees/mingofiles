@@ -3,3 +3,5 @@
 	email = jhanell.mingo@gmail.com
 [init]
 	defaultBranch = main
+[push]
+	autoSetupRemote = true
