@@ -295,7 +295,7 @@ layout {
 spawn-at-startup "waybar"
 spawn-at-startup "blueman-applet"
 spawn-at-startup "awww-daemon"
-spawn-at-startup "swayidle" "-w" "timeout" "601" "niri msg action power-off-monitors" "timeout" "600" "swaylock -f" "before-sleep" "swaylock -f"
+// Idle locking and monitor timeout disabled for AI training.
 
 switch-events {
      lid-close{
@@ -361,7 +361,7 @@ window-rule {
 
 window-rule {
     match app-id="zen"
-    opacity 0.85
+    opacity 1.00
 }
 
 window-rule {

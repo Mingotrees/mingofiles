@@ -28,6 +28,7 @@
   "clock": {
     "format": "<span text_transform=\"lowercase\">{:%H:%M %A, %b %d}</span> ",
     "tooltip": false,
+    "on-click": "python3 ~/.config/waybar/calendar-popup.py",
   },
   "cpu": {
     "format": "󰻠 {usage}%",
@@ -54,7 +55,10 @@
       "warning": 30,
       "critical": 15,
     },
-    "format": "󰁹 {capacity}%",
+    "format": "{icon} {capacity}%",
+    "format-charging": "{icon}  {capacity}%",
+    "format-plugged": "{icon}  {capacity}%",
+    "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
     "tooltip": false,
   },
   "network": {
