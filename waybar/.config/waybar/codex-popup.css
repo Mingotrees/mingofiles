@@ -1,0 +1,31 @@
+window#codex-popup, #codex-backdrop { background: transparent; }
+#codex-panel {
+    background: rgba(26, 26, 26, 0.97);
+    color: white;
+    border: 1px solid #555555;
+    border-radius: 12px;
+    padding: 18px;
+    font-family: "Hack Nerd Font", monospace;
+    font-size: 12px;
+}
+#codex-panel .agent-icon { font-size: 25px; }
+#codex-panel .agent-title { font-size: 14px; font-weight: bold; }
+#codex-panel .muted, #codex-panel .section-title { color: #aaaaaa; font-size: 10px; }
+#codex-panel .section-title { letter-spacing: 1px; }
+#codex-panel button {
+    color: white;
+    background: transparent;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    box-shadow: none;
+    text-shadow: none;
+    padding: 3px 7px;
+    min-width: 16px;
+    min-height: 22px;
+}
+#codex-panel button:hover { background: #3a3a3a; border-color: #555555; }
+#codex-panel separator { background: #3b3b3b; min-height: 1px; }
+#codex-panel progressbar trough { background: #444444; min-height: 3px; border: none; border-radius: 2px; }
+#codex-panel progressbar progress { background: white; min-height: 3px; border: none; border-radius: 2px; }
+#codex-panel progressbar.warning progress { background: orange; }
+#codex-panel progressbar.critical progress { background: red; }

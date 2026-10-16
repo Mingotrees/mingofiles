@@ -22,7 +22,7 @@ window#waybar {
 }
 
 #clock, #cpu, #memory, #temperature, #battery, 
-#network, #pulseaudio, #backlight, #tray {
+#network, #pulseaudio, #backlight, #tray, #custom-codex-usage {
     padding: 0 10px;
     font-family: "Hack Nerd Font", "Hack Nerd Font Mono";
     background-color: transparent;
@@ -91,3 +91,7 @@ window#waybar {
     -gtk-icon-effect: highlight;
     color: red;
 }
+
+#custom-codex-usage.warning { color: orange; }
+#custom-codex-usage.critical { color: red; }
+#custom-codex-usage.stale, #custom-codex-usage.unknown { color: #aaaaaa; }

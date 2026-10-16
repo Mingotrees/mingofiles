@@ -9,6 +9,7 @@
   "modules-center": ["clock"],
   "modules-right": [
     "tray",
+    "custom/codex-usage",
     "pulseaudio",
     "backlight",
     "network",
@@ -29,6 +30,13 @@
     "format": "<span text_transform=\"lowercase\">{:%H:%M %A, %b %d}</span> ",
     "tooltip": false,
     "on-click": "python3 ~/.config/waybar/calendar-popup.py",
+  },
+  "custom/codex-usage": {
+    "exec": "python3 ~/.config/waybar/codex-usage.py",
+    "return-type": "json",
+    "interval": 30,
+    "tooltip": true,
+    "on-click": "python3 ~/.config/waybar/codex-popup.py",
   },
   "cpu": {
     "format": "󰻠 {usage}%",

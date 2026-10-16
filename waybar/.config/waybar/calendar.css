@@ -4,19 +4,19 @@ window#calendar-popup,
 }
 
 #calendar-panel {
-    background: rgba(12, 16, 32, 0.97);
-    color: #dfd7d2;
-    border: 1px solid #3b405d;
-    border-radius: 14px;
-    padding: 14px;
-    font-family: "Hack Nerd Font", sans-serif;
-    font-size: 13px;
+    background: rgba(26, 26, 26, 0.97);
+    color: white;
+    border: 1px solid #555555;
+    border-radius: 12px;
+    padding: 18px;
+    font-family: "Hack Nerd Font", monospace;
+    font-size: 12px;
 }
 
 #calendar-heading {
     font-weight: bold;
-    font-size: 15px;
-    color: #ead1bb;
+    font-size: 14px;
+    color: white;
 }
 
 #calendar-panel button {
@@ -25,8 +25,8 @@ window#calendar-popup,
     box-shadow: none;
     text-shadow: none;
     border: 1px solid transparent;
-    border-radius: 10px;
-    color: #dfd7d2;
+    border-radius: 5px;
+    color: white;
     padding: 0;
     min-width: 40px;
     min-height: 36px;
@@ -40,34 +40,35 @@ window#calendar-popup,
 }
 
 #calendar-panel .weekday {
-    color: #85869a;
+    color: #aaaaaa;
     padding: 5px 0 8px;
-    font-size: 11px;
+    font-size: 10px;
 }
 
 #calendar-panel button.weekend {
-    background: rgba(83, 86, 126, 0.12);
+    background: rgba(255, 255, 255, 0.03);
 }
 
 #calendar-panel button.other-month {
-    color: #55586c;
+    color: #777777;
 }
 
 #calendar-panel button.today {
-    color: #f0d1b5;
+    color: white;
     font-weight: bold;
-    background-image: linear-gradient(#d1b28f, #d1b28f);
+    background-image: linear-gradient(white, white);
     background-size: 14px 2px;
     background-position: center 85%;
     background-repeat: no-repeat;
 }
 
 #calendar-panel button.selected {
-    border-color: #8289c7;
-    background-color: rgba(111, 119, 190, 0.08);
+    border-color: #aaaaaa;
+    background-color: #333333;
 }
 
 #calendar-panel button:hover,
 #calendar-panel button:focus {
-    background-color: rgba(111, 119, 190, 0.2);
+    background-color: #3a3a3a;
+    border-color: #555555;
 }
