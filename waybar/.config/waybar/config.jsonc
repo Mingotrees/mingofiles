@@ -10,8 +10,6 @@
   "modules-right": [
     "tray",
     "custom/codex-usage",
-    "pulseaudio",
-    "backlight",
     "network",
     "cpu",
     "memory",
@@ -75,21 +73,6 @@
     "format-ethernet": "󰈀 {ifname}",
     "format-disconnected": "󰤭  disconnected",
     "on-click": "kitty -e nmtui",
-    "tooltip": false,
-  },
-  "pulseaudio": {
-    "format": "󰕾 {volume}%",
-    "format-muted": "<span strikethrough=\"true\">󰖁 {volume}%</span>",
-    "on-click": "pavucontrol",
-    "on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
-    "on-scroll-up": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%+ -l 1.0",
-    "on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%-",
-    "tooltip": false,
-  },
-  "backlight": {
-    "format": "󰃠  {percent}%",
-    "on-scroll-up": "brightnessctl set +5%",
-    "on-scroll-down": "brightnessctl set 5%-",
     "tooltip": false,
   },
   "tray": {
