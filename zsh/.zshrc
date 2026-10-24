@@ -27,6 +27,10 @@ alias niriconf='vim ~/.config/niri/config.kdl'
 alias kittyconf='vim ~/.config/kitty/kitty.conf'
 alias waybarconf='vim ~/.config/waybar/config.jsonc'
 alias waybarsconf='vim ~/.config/waybar/style.css'
+alias jellyfinup='sudo systemctl start jellyfin.service'
+alias jellyfindown='sudo systemctl stop jellyfin.service'
+alias smbup='sudo systemctl start smb nmb'
+alias smbdown='sudo systemctl stop smb nmb'
 
 [[ ! -r "$HOME/.local/bin/env" ]] || source "$HOME/.local/bin/env"
 
@@ -35,3 +39,8 @@ alias waybarsconf='vim ~/.config/waybar/style.css'
 export PATH="$HOME/.local/bin:$PATH"
 #export PATH="$HOME/.docker-bin:$PATH"
 
+
+# >>> oh-my-opencode-slim background subagents >>>
+export OPENCODE_EXPERIMENTAL_BACKGROUND_SUBAGENTS=true
+export OPENCODE_ENABLE_EXA=1
+# <<< oh-my-opencode-slim background subagents <<<
