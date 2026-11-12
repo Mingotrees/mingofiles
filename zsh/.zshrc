@@ -31,7 +31,6 @@ alias jellyfinup='sudo systemctl start jellyfin.service'
 alias jellyfindown='sudo systemctl stop jellyfin.service'
 alias smbup='sudo systemctl start smb nmb'
 alias smbdown='sudo systemctl stop smb nmb'
-
 [[ ! -r "$HOME/.local/bin/env" ]] || source "$HOME/.local/bin/env"
 
 

@@ -16,6 +16,10 @@
     margin: 4px;
 }
 
+.modules-left {
+    padding-left: 6px;
+}
+
 window#waybar {
     background-color: rgba(40, 40, 40, 0.0);
     color: white;
